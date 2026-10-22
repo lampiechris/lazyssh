@@ -156,6 +156,7 @@ build-all: quality $(OUTPUT_DIR) ## Build binaries for all platforms
 
 .PHONY: install
 install: build ## Install binary to GOBIN
+	mkdir -p $(GOBIN)
 	cp $(OUTPUT_DIR)/$(BINARY_NAME) $(GOBIN)/
 
 $(OUTPUT_DIR):
